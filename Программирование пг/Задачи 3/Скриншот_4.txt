@@ -1,0 +1,15 @@
+x='98afv67jl24k07'
+def h(x):
+    x=list(x)
+    for i in range(len(x)-1):
+        if x[i]=='0':
+            x.pop(i)
+    m=[]
+    for i in range(len(x)):
+        if x[i].isalpha()==True:
+            m.append('+')
+        else:
+            m.append(x[i])
+    ms=''.join(m)
+    print(eval(ms))
+h(x)

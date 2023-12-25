@@ -1,0 +1,16 @@
+def all_eq(lst):
+    max_len = max(len(s) for s in lst)  
+    
+    result = []  
+    
+    for s in lst:
+        if len(s) < max_len:  
+            s += '_' * (max_len - len(s))  
+        result.append(s)  
+        
+    return result
+
+
+lst = ['abc', 'defg', 'hi']
+result = all_eq(lst)
+print(result)  # ['abc_', 'defg', 'hi__']

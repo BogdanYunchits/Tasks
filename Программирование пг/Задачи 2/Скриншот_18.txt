@@ -1,0 +1,11 @@
+a='afhjeakk afjfeeejeaa'#a=5,e=8
+a=list(a)
+m=[]
+for i in range(len(a)):
+    if a[i]=='a':
+        m.append('5')
+    elif a[i]=='e':
+        m.append('8')
+    else:
+        m.append(a[i])
+print(''.join(m))

@@ -1,0 +1,7 @@
+def useless(lst):
+    return max(lst) / len(lst)
+
+
+print(useless([5, 6, 90]))
+print(useless([30, 8.4, -9, 15, 0, 90]))
+print(useless([-56, -0.03, -4.40, 61.7, 17.62, 65, 9.3]))

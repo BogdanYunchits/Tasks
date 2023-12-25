@@ -1,0 +1,10 @@
+my_dict = {'first_one': 'we can do it'}
+
+
+def biggest_dict(**kwargs):
+    my_dict.update(**kwargs)
+
+
+biggest_dict(k1=25, k2=77, k3=71, k4=81)
+biggest_dict(name='Богдан', age=77, weight=90, eyes_color='blue')
+print(my_dict)

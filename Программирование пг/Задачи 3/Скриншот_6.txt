@@ -1,0 +1,38 @@
+def convert_time(time_str):
+    try:
+        
+        time_components = time_str.split(':')
+        
+        if len(time_components) == 2:
+            
+            hour = int(time_components[0])
+            minute = int(time_components[1][:2]) 
+            meridiem = time_components[1][2:].strip().upper()
+            
+            if meridiem == 'AM' and hour == 12:
+                hour = 0
+            elif meridiem == 'PM' and hour != 12:
+                hour += 12
+            
+            
+            return '{:02d}:{:02d}'.format(hour, minute)
+        
+        elif len(time_components) == 3:
+            
+            hour = int(time_components[0])
+            minute = int(time_components[1])
+            
+            
+            if 0 <= hour < 12:
+                return '{:02d}:{:02d} AM'.format(hour, minute)
+            elif 12 <= hour < 24:
+                return '{:02d}:{:02d} PM'.format(hour-12, minute)
+        
+        else:
+          
+            return time_str
+    
+    except ValueError:
+        
+        return time_str
+    

@@ -1,0 +1,10 @@
+a=[2,6,7,8]
+def b(a):
+    h=0
+    m=[]
+    for i in range(len(a)):
+        t=a[i]
+        h+=t
+        m.append(h)
+    print(m)
+b(a)

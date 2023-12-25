@@ -1,0 +1,13 @@
+def play_game(player1, player2):
+    if player1 == player2:
+        return "Ничья"
+    elif (player1 == "камень" and player2 == "ножницы") or (player1 == "ножницы" and player2 == "бумага") or (player1 == "бумага" and player2 == "камень"):
+        return "Игрок 1 победил"
+    else:
+        return "Игрок 2 победил"
+
+
+print(play_game("камень", "ножницы"))  
+print(play_game("ножницы", "бумага"))  
+print(play_game("бумага", "камень"))   
+print(play_game("камень", "бумага"))   

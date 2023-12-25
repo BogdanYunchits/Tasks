@@ -1,0 +1,19 @@
+def merge_arrays(x_coordinates, y_coordinates):
+    
+    if len(x_coordinates) != len(y_coordinates):
+        raise ValueError("Массивы должны иметь одинаковую длину")
+    
+    
+    merged_array = []
+    
+   
+    for x, y in zip(x_coordinates, y_coordinates):
+        merged_array.append((x, y))  
+    
+    return merged_array
+
+x_coords = [1, 2, 3, 4, 5]
+y_coords = [6, 7, 8, 9, 10]
+
+result = merge_arrays(x_coords, y_coords)
+print(result)

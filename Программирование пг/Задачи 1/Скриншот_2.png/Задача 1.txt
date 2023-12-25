@@ -1,0 +1,10 @@
+def to_float(num):
+    if isinstance(num, (int, float)):
+        return float(num)
+    return "Невозможно преобразовать"
+
+print(to_float(45))
+print(to_float(-6.788))
+print(to_float(True))
+print(to_float('Не число'))
+print(to_float('9.5'))

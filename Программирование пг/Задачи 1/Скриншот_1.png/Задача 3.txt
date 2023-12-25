@@ -1,0 +1,7 @@
+def to_list(*args):
+    return list(args)
+
+
+print(to_list(2, 4, 88))
+print(to_list('постройка', 7, 'район'))
+print(to_list([1, 8, 9], 9.7, 'река'))

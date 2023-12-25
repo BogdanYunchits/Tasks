@@ -1,0 +1,35 @@
+def number_to_words(number):
+    ones = ('', 'один', 'два', 'три', 'четыре', 'пять', 'шесть', 'семь', 'восемь', 'девять')
+    teens = ('', 'одиннадцать', 'двенадцать', 'тринадцать', 'четырнадцать', 'пятнадцать', 'шестнадцать', 'семнадцать', 'восемнадцать', 'девятнадцать')
+    tens = ('', 'десять', 'двадцать', 'тридцать', 'сорок', 'пятьдесят', 'шестьдесят', 'семьдесят', 'восемьдесят', 'девяносто')
+    hundreds = ('', 'сто', 'двести', 'триста', 'четыреста', 'пятьсот', 'шестьсот', 'семьсот', 'восемьсот', 'девятьсот')
+
+    if number == 0:
+        return 'ноль'
+
+    result = ''
+    
+    hundreds_digit = number // 100
+    if hundreds_digit > 0:
+        result += hundreds[hundreds_digit]
+        number %= 100
+        if number > 0:
+            result += ' '
+
+    tens_digit = number // 10
+    ones_digit = number % 10
+    if tens_digit > 1:
+        result += tens[tens_digit]
+        if ones_digit > 0:
+            result += ' ' + ones[ones_digit]
+    elif tens_digit == 1:
+        result += teens[ones_digit]
+    elif ones_digit > 0:
+        result += ones[ones_digit]
+
+    return result
+
+
+
+num = 107
+print(number_to_words(num))  

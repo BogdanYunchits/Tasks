@@ -1,0 +1,13 @@
+my_dict = {'key1': 1, 'key2': 2, 'key3': 3, 'key4': 4, 'key5': 5}
+
+keys = list(my_dict.keys())
+values = list(my_dict.values())
+keys[0], keys[-1] = keys[-1], keys[0]
+values[0], values[-1] = values[-1], values[0]
+
+del my_dict[keys[1]]
+
+my_dict["new_key"] = "new_value"
+
+
+print(my_dict)

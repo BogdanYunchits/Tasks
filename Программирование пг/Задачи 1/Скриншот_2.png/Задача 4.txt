@@ -1,0 +1,10 @@
+import math
+
+def find_radius(volume):
+    radius = (3 * volume / (4 * math.pi))**(1/3)
+    return radius
+
+
+volume = 100  
+radius = find_radius(volume)
+print("Радиус шара:", radius)

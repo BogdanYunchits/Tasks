@@ -1,0 +1,9 @@
+m=[6,8,9,0,3]
+
+
+def bg(m):
+    if sum(m)>21:
+        return(True)
+    if sum(m)<=21:
+        return(False)
+print(bg(m))
